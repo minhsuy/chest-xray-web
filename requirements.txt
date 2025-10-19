@@ -2,6 +2,6 @@ flask
 tensorflow==2.15.0
 numpy
 opencv-python
-pillow
+matplotlib
 gdown
 gunicorn
