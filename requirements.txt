@@ -1,0 +1,7 @@
+flask
+tensorflow==2.14.0
+numpy
+opencv-python
+pillow
+gdown
+gunicorn
