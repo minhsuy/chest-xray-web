@@ -1,8 +1,8 @@
-# 🩻 ỨNG DỤNG PHÁT HIỆN VIÊM PHỔI TỪ ẢNH X-QUANG NGỰC
+# ỨNG DỤNG PHÁT HIỆN VIÊM PHỔI TỪ ẢNH X-QUANG NGỰC
 
 ---
 
-## 🌟 Tổng quan
+## Tổng quan
 
 Dự án này sử dụng mô hình học sâu **MobileNetV2 / Xception** để phát hiện **bệnh viêm phổi (Pneumonia)** từ ảnh X-quang ngực.  
 Bộ dữ liệu được thu thập từ **Trung tâm Y tế Phụ nữ và Trẻ em Quảng Châu (Trung Quốc)**, bao gồm các ảnh X-quang của trẻ từ 1–5 tuổi, được chẩn đoán và gán nhãn bởi hai bác sĩ chuyên khoa hô hấp.
@@ -13,15 +13,15 @@ Mô hình được tích hợp **Grad-CAM (Gradient-weighted Class Activation Ma
 
 ---
 
-## 🧠 1️⃣ Mục tiêu
+## 1 Mục tiêu
 
-- Tự động phân loại ảnh X-quang thành **🟢 Bình thường (Normal)** hoặc **🔴 Viêm phổi (Pneumonia)**.
+- Tự động phân loại ảnh X-quang thành **Bình thường (Normal)** hoặc **Viêm phổi (Pneumonia)**.
 - Trực quan hóa khu vực nghi ngờ bằng **Grad-CAM** để tăng tính minh bạch của mô hình.
 - Cung cấp giao diện web đơn giản, thân thiện, dễ sử dụng cho người dùng không chuyên kỹ thuật.
 
 ---
 
-## 🧪 2️⃣ Dữ liệu
+## 2 Dữ liệu
 
 **Nguồn:** [Chest X-Ray Images (Pneumonia) – Kaggle Dataset](https://www.kaggle.com/datasets/ghost5612/chest-x-ray-images-normal-and-pneumonia)
 
@@ -35,7 +35,7 @@ Mô hình được tích hợp **Grad-CAM (Gradient-weighted Class Activation Ma
 
 ---
 
-## ⚙️ 3️⃣ Công nghệ sử dụng
+## 3 Công nghệ sử dụng
 
 | Thành phần              | Công cụ / Thư viện                          |
 | ----------------------- | ------------------------------------------- |
@@ -48,7 +48,7 @@ Mô hình được tích hợp **Grad-CAM (Gradient-weighted Class Activation Ma
 
 ---
 
-## 🚀 4️⃣ Cách chạy ứng dụng
+## 4 Cách chạy ứng dụng
 
 - Bước 1. Tải mã nguồn :
 
@@ -91,15 +91,15 @@ python app.py
 
 - Sau đó tải ảnh X-quang lên để xem:
 
-  ✅ Kết quả dự đoán: Bình thường hoặc Viêm phổi
+   Kết quả dự đoán: Bình thường hoặc Viêm phổi
 
-  📈 Xác suất dự đoán (%)
+   Xác suất dự đoán (%)
 
-  🔥 Bản đồ Grad-CAM tô sáng vùng phổi mà mô hình nhận diện là đáng ngờ
+   Bản đồ Grad-CAM tô sáng vùng phổi mà mô hình nhận diện là đáng ngờ
 
 ```
 
-## 📊 5️⃣ Kết quả mô hình
+## 5 Kết quả mô hình
 
 ```
 
@@ -109,12 +109,13 @@ python app.py
 
 ```
 
-🔍 6️⃣ Ví dụ kết quả trực quan :
-| Ảnh gốc | Bản đồ kích hoạt (Grad-CAM) | Ảnh chồng (Overlay) |
-| ----------------------------------------- | ---------------------------------------- | --------------------------------------- |
-| ![Original](static/uploads/person11_virus_38.jpeg) | ![Grad-CAM](static/uploads/overlay_person90_bacteria_442.jpeg) | ![Overlay](static/uploads/cam_jet_person11_virus_38.jpeg) |
+## 6 Ví dụ kết quả trực quan :
 
-## 🧩 7️⃣ Cấu trúc thư mục
+| Ảnh gốc                                            | Bản đồ kích hoạt (Grad-CAM)                                | Ảnh chồng (Overlay)                                           |
+| -------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------- |
+| ![Original](static/uploads/person11_virus_38.jpeg) | ![Grad-CAM](static/uploads/cam_jet_person11_virus_38.jpeg) | ![Overlay](static/uploads/overlay_person90_bacteria_442.jpeg) |
+
+## 7 Cấu trúc thư mục
 
 ```
 
