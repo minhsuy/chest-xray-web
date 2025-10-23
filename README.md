@@ -187,7 +187,7 @@ Các mô hình đã được nhóm huấn luyện sẵn có thể tải tại đ
 ## 3 Link Notebook huấn luyện (Kaggle)
 
 Toàn bộ quá trình huấn luyện, fine-tuning và tạo mô hình `.h5` được thực hiện trong Notebook sau:  
-👉 [Kaggle Notebook – Pneumonia Detection Training](https://www.kaggle.com/code/minhnguynthianh/xrayyy?scriptVersionId=269698954)
+ [Kaggle Notebook – Pneumonia Detection Training](https://www.kaggle.com/code/minhnguynthianh/xrayyy?scriptVersionId=269698954)
 
 Notebook này bao gồm:
 
