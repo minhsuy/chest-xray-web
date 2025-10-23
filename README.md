@@ -181,6 +181,9 @@ Chia dữ liệu thành ba phần:
 
 - test: dùng để đánh giá cuối cùng (≈15%)
 
+Các mô hình đã được nhóm huấn luyện sẵn có thể tải tại đây:
+**_Google Drive Folder_**: (https://drive.google.com/drive/folders/1Iya9tv86Oo_ok1hR4eQnLc_8qNr0SI6-)
+
 ## 3 Tiền xử lý & Augmentation
 
 Để tăng tính tổng quát và giảm overfitting, áp dụng các phép Data Augmentation:
