@@ -184,7 +184,19 @@ Chia dữ liệu thành ba phần:
 Các mô hình đã được nhóm huấn luyện sẵn có thể tải tại đây:
 **_Google Drive Folder_**: (https://drive.google.com/drive/folders/1Iya9tv86Oo_ok1hR4eQnLc_8qNr0SI6-)
 
-## 3 Tiền xử lý & Augmentation
+## 3 Link Notebook huấn luyện (Kaggle)
+
+Toàn bộ quá trình huấn luyện, fine-tuning và tạo mô hình `.h5` được thực hiện trong Notebook sau:  
+👉 [Kaggle Notebook – Pneumonia Detection Training](https://www.kaggle.com/code/minhnguynthianh/xrayyy?scriptVersionId=269698954)
+
+Notebook này bao gồm:
+
+- Tiền xử lý & Augmentation dữ liệu
+- Huấn luyện song song Xception & MobileNetV2
+- Fine-tuning và lưu checkpoint `.h5`
+- Grad-CAM visualization
+
+## 4 Tiền xử lý & Augmentation
 
 Để tăng tính tổng quát và giảm overfitting, áp dụng các phép Data Augmentation:
 
@@ -204,7 +216,7 @@ train_datagen = ImageDataGenerator(
 
 Các ảnh validation & test chỉ chuẩn hoá về [0,1].
 
-## 4️ Xây dựng mô hình (Transfer Learning)
+## 5 Xây dựng mô hình (Transfer Learning)
 
 Sử dụng mô hình pretrained trên ImageNet, loại bỏ phần fully-connected gốc và thêm đầu ra riêng.
 
@@ -242,7 +254,7 @@ model = Sequential([
 ])
 ```
 
-## 5 Huấn luyện giai đoạn 1 (Transfer Learning)
+## 6 Huấn luyện giai đoạn 1 (Transfer Learning)
 
 Đóng băng toàn bộ trọng số gốc của mô hình ImageNet.
 Chỉ train phần classification head (2–3 lớp cuối).
@@ -255,7 +267,7 @@ EarlyStopping(monitor='val_loss', patience=3)
 ReduceLROnPlateau(monitor='val_loss', factor=0.3, patience=2)
 ```
 
-## 6 Huấn luyện giai đoạn 2 (Fine-Tuning)
+## 7 Huấn luyện giai đoạn 2 (Fine-Tuning)
 
 Mở băng 20 lớp cuối (Xception) hoặc 10 lớp cuối (MobileNetV2).
 
@@ -269,7 +281,7 @@ models/xception_chestxray_finetuned.h5
 models/mobilenetv2_chestxray_finetuned.h5
 ```
 
-## 7 Đánh giá mô hình
+## 8 Đánh giá mô hình
 
 Đánh giá trên tập test:
 
@@ -286,12 +298,12 @@ plt.plot(history.history['accuracy'])
 plt.plot(history.history['val_accuracy'])
 ```
 
-## 8 Phân tích Grad-CAM
+## 9 Phân tích Grad-CAM
 
 Dùng Grad-CAM để trực quan hóa vùng mà mô hình chú ý khi dự đoán.
 Kết quả cho thấy vùng phổi bị mờ hoặc trắng (viêm) được mô hình tập trung vào → xác nhận mô hình học đúng đặc trưng y khoa
 
-## 9 Kết luận
+## 10 Kết luận
 
 | Mô hình     | Test Accuracy | Ưu điểm                   | Nhược điểm        |
 | ----------- | ------------- | ------------------------- | ----------------- |
